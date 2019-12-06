@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Total Items: <span id="count">0</span></h2>
+
+    <div class="container">
+      <input class="form-control name-input" />
+      <input class="form-control dob-input" />
+      <button class="add-person">Add</button>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Birth Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="persons-list"></tbody>
+      </table>
+    </div>
+  </body>
+
+  <!-- Templates -->
+  <script type="text/template" class="persons-list-template">
+    <td><span class="name"><%= name %></span></td>
+    <td><span class="dob"><%= dob %></span></td>
+    <td><button class="delete-person">Delete</button> </td>
+  </script>
+
+  <!-- Dependencies -->
+
+  <script src="src/js/jquery-3.4.1.min.js"></script>
+  <script src="src/js/underscore-min.js"></script>
+  <script src="src/js/backbone-min.js"></script>
+  <script src="src/js/person-model.js"></script>
+</html>
