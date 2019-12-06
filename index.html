@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+      }
+      h4 {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <h2>Total Items: <span id="count">0</span></h2>
 
     <div class="container">
-      <input class="form-control name-input" type="text" />
-      <input class="form-control dob-input" type="date" />
+      <div>
+        <h4>Name</h4>
+        <input class="form-control name-input" type="text" />
+      </div>
+      <div>
+        <h4>Birth date</h4>
+        <input class="form-control dob-input" type="date" />
+      </div>
       <button class="add-person">Add</button>
 
       <table class="table">
