@@ -64,13 +64,15 @@ var personsView = new PersonsView();
 
 $(document).ready(function() {
   $(".add-person").on("click", function() {
-    var person = new Person({
-      name: $(".name-input").val(),
-      dob: $(".dob-input").val()
-    });
-    $(".name-input").val("");
-    $(".dob-input").val("");
+    if ($(".name-input").val() !== "") {
+      var person = new Person({
+        name: $(".name-input").val(),
+        dob: $(".dob-input").val()
+      });
+      $(".name-input").val("");
+      $(".dob-input").val("");
 
-    persons.add(person);
+      persons.add(person);
+    }
   });
 });
