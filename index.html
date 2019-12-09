@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+
     <style>
       div {
         display: inline-block;
@@ -14,38 +15,35 @@
       }
     </style>
   </head>
+
   <body>
     <h2>Total Items: <span id="count">0</span></h2>
-
-    <div class="container">
-      <div>
-        <h4>Name</h4>
-        <input class="form-control name-input" type="text" />
-      </div>
-      <div>
-        <h4>Birth date</h4>
-        <input class="form-control dob-input" type="date" />
-      </div>
-      <button class="add-person">Add</button>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Birth Date</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody class="persons-list"></tbody>
-      </table>
+    <div>
+      <h4>Name</h4>
+      <input class="name-input" type="text" />
     </div>
+    <div>
+      <h4>Birth date</h4>
+      <input class="dob-input" type="date" />
+    </div>
+    <button class="add-person">Add</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Birth Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="persons-list"></tbody>
+    </table>
   </body>
 
   <!-- Templates -->
   <script type="text/template" class="persons-list-template">
-    <td><span class="name"><%= name %></span></td>
-    <td><span class="dob"><%= dob %></span></td>
-    <td><button class="delete-person">Delete</button> </td>
+    <td><%= name %></td>
+    <td><%= dob %></td>
+    <td><button class="delete-person">Delete</button></td>
   </script>
 
   <!-- Dependencies -->
